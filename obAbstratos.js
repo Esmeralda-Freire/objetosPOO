@@ -1,12 +1,14 @@
 // Definição do objeto
-function FormaGeometrica(lados, base, altura) {
-    // Atributos
-    this.lados = lados;
-    this.base = base;
-    this.altura = altura;
+class FormaGeometrica {
+    constructor(lados, base, altura) {
+      // Atributos
+      this.lados = lados;
+      this.base = base;
+      this.altura = altura;
+    }
   
     // Métodos
-    this.tipo = function () {
+    tipo() {
       switch (this.lados) {
         case 3:
           return "Triângulo";
@@ -15,36 +17,39 @@ function FormaGeometrica(lados, base, altura) {
         default:
           return "Polígono";
       }
-    };
+    }
   
-    this.area = function () {
+    area() {
       return this.base * this.altura;
-    };
+    }
   
-    this.perimetro = function () {
+    perimetro() {
       return this.lados * this.base;
-    };
+    }
   }
   
-function Funcionario(nome, cpf, salario) {
-    this.nome = nome;
-    this.cpf = cpf;
-    this.salario = salario;
+  class Funcionario {
+    constructor(nome, cpf, salario) {
+      this.nome = nome;
+      this.cpf = cpf;
+      this.salario = salario;
+    }
   
-    this.bonificacao = function (percentual) {
+    bonificacao(percentual) {
       const bonificacao = 100;
       console.log(`O funcionário ${this.nome} recebeu uma bonificação.`);
       this.salario += bonificacao;
-    };
+    }
   
-    this.ferias = function (dias) {
+    ferias(dias) {
       console.log(`O funcionário ${this.nome} está de férias por ${dias} dias.`);
-    };
+    }
   
-    this.demitir = function () {
+    demitir() {
       console.log(`O funcionário ${this.nome} foi demitido.`);
-    };
+    }
   }
+  
   
   
   
